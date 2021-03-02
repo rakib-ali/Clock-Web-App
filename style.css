@@ -1,0 +1,214 @@
+/*-------FORM-----------*/
+*{
+    margin: 0;
+    padding: 0;
+}
+.hero{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(banner.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+.form-box{
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    background: #091921;
+    padding: 5px;
+    overflow: hidden;
+}
+.light{
+    background: #d1dae3;
+}
+/*-----------TOGGLE BUTTON------------*/
+.button-box{
+    width: 200px;
+    margin: 45px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #fdfdfd1f;
+    border-radius: 30px;
+    background:  #091921;
+}
+.toggle-btn{
+    padding: 5px 35px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #d87697,#06ffde);
+    border-radius: 30px;
+    transition: .5s; 
+}
+/*--------CLOCK--------*/
+.clock{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    position: relative;
+    background: url(clock.png);
+    background-size: cover;
+    transition: .5s;
+    /*border: 4px solid#11afaf;
+    border-radius: 50%;*/
+    /*box-shadow: 0 -15px 15px rgba(255,255,255,0.05),
+    inset 0 -15px 15px rgba(255,255,255,0.05),0 15px 15px rgba(0,0,0,0.3),inset 0 -15px 15px rgba(0,0,0,0.3);*/
+}
+.clock:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 1px 10px 3px rgb(31, 221, 196);
+    z-index: 20;
+}
+.light .clock:before{
+    background: #00b7ff;
+}
+.hr, .mn, .sc{
+    position: relative;
+}
+.hr{
+    position: absolute;
+    top: 45px;
+    left: 98px;
+    width: 3px;
+    height: 50px;
+    background: #fffcfd;
+    z-index: 10;
+    transform-origin: 50% 55px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+.light .hr{
+    background: #091921;
+}
+.mn{
+    position: absolute;
+    top: 30px;
+    left: 99px;
+    width: 2px;
+    height: 85px;
+    background: #fffcfd;
+    z-index: 8;
+    transform-origin: 50% 70px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+.light .mn{
+    background: #091921;
+}
+.sc{
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    width: 1px;
+    height: 105px;
+    background: #32d1d1;
+    z-index: 6;
+    transform-origin: 50% 80px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+.toggleClass{
+    height: 15px;
+    width: 15px;
+    background:rgb(105, 131, 125);
+    color: rgb(105, 131, 125);
+    border-radius: 50%;
+    position: absolute;
+    right: 210px;
+    top: 45px;
+    font-family: consolas;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    
+}
+.toggleClass::before{
+    position: absolute;
+    left: 20px;
+    content: 'Light Mode';
+    white-space: nowrap;
+}
+.light .toggleClass{
+    content: 'Dark Mode';
+}
+/*----------STOPWATCH---------------*/
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    height: 180px;
+    width: 180px;
+  
+    border: 2px solid rgb(105, 131, 125);
+    border-radius: 50%;
+  }
+  
+  .time {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
+    font-size: 30px;
+    color: #80a3a3;
+  }
+  .controls {
+    display: flex;
+    justify-content: space-between;
+  
+    width: 180px;
+  }
+  
+  button{
+    cursor: pointer;
+    background: transparent;
+    padding: 0;
+    border: none;
+    margin: 0;
+    outline: none;
+    
+  }
+  
+  #playButton {
+    display: block;
+    margin-left: 10px;
+    background:rgb(105, 131, 125);
+    border-radius: 50%;
+  }
+  
+  
+  #pauseButton {
+    display: none;
+    margin-left: 10px;
+    background: rgb(105, 131, 125);
+    border-radius: 50%;
+  }
+  #resetButton{
+    background: rgb(105, 131, 125);
+    border-radius: 50%;
+  }
+  .stopwatch{
+      position: relative;
+      left: 400px;
+      top: -180px;
+      transition: .5s;
+  }
+  
+  
